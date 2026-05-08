@@ -1,0 +1,15 @@
+Caso Real: En 2010, la CBS compró fotocopiadoras usadas y demostró que contenían miles de documentos médicos y planos de construcción confidenciales de las empresas que las habían devuelto sin borrar el disco.
+
+🎰 3. El caso del "Termómetro del Acuario": Casino de Las Vegas
+Este es el ejemplo favorito de los Red Teams para demostrar que cualquier cosa es una entrada.
+
+El Hecho: Hackearon un casino de lujo para robar la "Base de Datos de Jugadores VIP" (sus fortunas y trapos sucios).
+
+La "Puerta": Entraron a través del termómetro inteligente del acuario del vestíbulo.
+
+La Realidad: El termómetro estaba conectado a la misma red (Wi-Fi) que los servidores del casino. Como el termómetro no tenía seguridad, lo usaron como "puente" para entrar, escalar privilegios y llegar a los datos del CEO.
+
+🔋 4. El caso del SAI (UPS) - Dispositivos de Energía
+El Hecho: Recientemente, el FBI advirtió que grupos de hackers están atacando los SAIs (los dispositivos que dan batería cuando se va la luz).
+
+La Técnica: Estos aparatos están conectados a la red para que el técnico vea el estado de la batería. Como casi nadie les cambia la contraseña, los hackers entran y, desde ahí, apagan los servidores o los usan para saltar al PC del jefe.

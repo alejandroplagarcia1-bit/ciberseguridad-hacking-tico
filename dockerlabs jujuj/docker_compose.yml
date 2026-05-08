@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  # Máquina 1: La Fotocopiadora (Acceso inicial)
+  impresora:
+    build: ./printer_lab
+    container_name: printer_maquina
+    ports:
+      - "8081:80"
+    networks:
+      - red_barro
+
+  # Máquina 2: El Hotel (Robo de identidad)
+  hotel:
+    build: ./hotel_lab
+    container_name: hotel_maquina
+    ports:
+      - "8082:80"
+    networks:
+      - red_barro
+
+  # Máquina 3: La Constructora (El golpe final)
+  constructora:
+    build: ./cimientos_lab
+    container_name: cimientos_maquina
+    ports:
+      - "8083:80"
+    networks:
+      - red_barro
+
+networks:
+  red_barro:
+    driver: bridge

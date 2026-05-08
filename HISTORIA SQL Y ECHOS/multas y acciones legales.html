@@ -1,0 +1,153 @@
+
+<style>
+  .slide { font-family: var(--font-sans); padding: 2rem 0; }
+  .hero { background: #26215C; border-radius: var(--border-radius-lg); padding: 2rem 2rem 1.5rem; margin-bottom: 1.5rem; }
+  .hero-tag { display: inline-block; background: #AFA9EC; color: #26215C; font-size: 11px; font-weight: 500; padding: 3px 10px; border-radius: 20px; text-transform: uppercase; letter-spacing: .5px; margin-bottom: .75rem; }
+  .hero-title { font-size: 26px; font-weight: 500; color: #EEEDFE; margin: 0 0 .4rem; }
+  .hero-sub { font-size: 14px; color: #AFA9EC; margin: 0; }
+  .section-label { font-size: 11px; font-weight: 500; color: var(--color-text-secondary); text-transform: uppercase; letter-spacing: .6px; margin: 0 0 .6rem; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+  .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: .75rem; margin-bottom: 1rem; }
+  .card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1rem 1.25rem; }
+  .charge-card { border-left: 3px solid #E24B4A; border-radius: 0 var(--border-radius-md) var(--border-radius-md) 0; background: var(--color-background-secondary); padding: .75rem 1rem; margin-bottom: .5rem; }
+  .charge-title { font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin: 0 0 2px; }
+  .charge-years { font-size: 22px; font-weight: 500; color: #A32D2D; }
+  .charge-years span { font-size: 12px; font-weight: 400; color: var(--color-text-secondary); }
+  .total-box { background: #501313; border-radius: var(--border-radius-md); padding: 1rem 1.25rem; display: flex; align-items: center; justify-content: space-between; margin-top: .25rem; }
+  .total-label { font-size: 13px; color: #F7C1C1; }
+  .total-number { font-size: 30px; font-weight: 500; color: #FCEBEB; }
+  .fine-card { background: var(--color-background-secondary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: .75rem 1rem; margin-bottom: .5rem; }
+  .fine-amount { font-size: 20px; font-weight: 500; color: #854F0B; }
+  .fine-desc { font-size: 12px; color: var(--color-text-secondary); margin-top: 2px; }
+  .doc-pill { background: #E1F5EE; color: #085041; font-size: 12px; font-weight: 500; padding: 5px 12px; border-radius: 20px; display: inline-block; margin: 3px 3px 3px 0; }
+  .signer-row { display: flex; align-items: center; gap: 8px; padding: 6px 0; border-bottom: 0.5px solid var(--color-border-tertiary); font-size: 13px; color: var(--color-text-primary); }
+  .signer-row:last-child { border-bottom: none; }
+  .ok-dot { width: 8px; height: 8px; border-radius: 50%; background: #1D9E75; flex-shrink: 0; }
+  .no-dot { width: 8px; height: 8px; border-radius: 50%; background: #E24B4A; flex-shrink: 0; }
+  .scope-item { display: flex; gap: 10px; align-items: flex-start; padding: .6rem 0; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .scope-item:last-child { border-bottom: none; }
+  .scope-num { background: #AFA9EC; color: #26215C; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 500; flex-shrink: 0; margin-top: 1px; }
+  .scope-title { font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin: 0 0 2px; }
+  .scope-desc { font-size: 12px; color: var(--color-text-secondary); }
+  .warn-banner { background: #FAECE7; border: 0.5px solid #F09975; border-radius: var(--border-radius-md); padding: .75rem 1rem; display: flex; gap: 10px; align-items: flex-start; margin-top: 1rem; }
+  .warn-icon { font-size: 18px; color: #993C1D; flex-shrink: 0; margin-top: 1px; }
+  .warn-text { font-size: 12px; color: #712B13; line-height: 1.5; }
+  @media (prefers-color-scheme: dark) {
+    .hero { background: #3C3489; }
+    .hero-title { color: #EEEDFE; }
+    .hero-tag { background: #534AB7; color: #EEEDFE; }
+    .charge-card { border-left-color: #F09595; }
+    .charge-years { color: #F7C1C1; }
+    .total-box { background: #791F1F; }
+    .fine-amount { color: #FAC775; }
+    .doc-pill { background: #085041; color: #9FE1CB; }
+    .scope-num { background: #534AB7; color: #EEEDFE; }
+    .warn-banner { background: #4A1B0C; border-color: #993C1D; }
+    .warn-text { color: #F5C4B3; }
+    .warn-icon { color: #F5C4B3; }
+  }
+</style>
+
+<div class="slide">
+  <h2 class="sr-only">Consecuencias legales en ciberseguridad: penas, multas y documentación requerida</h2>
+
+  <div class="hero">
+    <div class="hero-tag">Operación Cimientos de Barro</div>
+    <div class="hero-title">Sin papel, no hay hacker. Hay terrorista.</div>
+    <div class="hero-sub">Guía legal para entender lo que te jugás antes de tocar un teclado</div>
+  </div>
+
+  <div class="grid2">
+
+    <div class="card">
+      <div class="section-label">Cargos penales acumulados</div>
+      <div class="charge-card">
+        <div class="charge-title">Sabotaje en infraestructura crítica</div>
+        <div class="charge-years">10–15 <span>años</span></div>
+        <div style="font-size:11px;color:var(--color-text-secondary);margin-top:2px;">Obra pública = seguridad nacional</div>
+      </div>
+      <div class="charge-card">
+        <div class="charge-title">Espionaje industrial agravado</div>
+        <div class="charge-years">5–8 <span>años</span></div>
+        <div style="font-size:11px;color:var(--color-text-secondary);margin-top:2px;">Planos + contabilidad B robados</div>
+      </div>
+      <div class="charge-card">
+        <div class="charge-title">Pertenencia a organización criminal</div>
+        <div class="charge-years">4–6 <span>años</span></div>
+        <div style="font-size:11px;color:var(--color-text-secondary);margin-top:2px;">Si actúas con un "socio", sois banda</div>
+      </div>
+      <div class="total-box">
+        <div class="total-label">Petición fiscal total</div>
+        <div class="total-number">≈ 25 años</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Ruina económica</div>
+      <div class="fine-card">
+        <div class="fine-amount">30–50 M€</div>
+        <div class="fine-desc">Responsabilidad civil si la empresa pierde contratos públicos por tu culpa</div>
+      </div>
+      <div class="fine-card">
+        <div class="fine-amount">hasta 20 M€</div>
+        <div class="fine-desc">Multa RGPD (4% facturación anual). La empresa te repercutirá la deuda de por vida</div>
+      </div>
+      <div class="fine-card" style="border-left: 3px solid #F09975; border-radius: 0 var(--border-radius-md) var(--border-radius-md) 0;">
+        <div class="fine-amount" style="font-size:14px;font-weight:500;">Embargo perpetuo</div>
+        <div class="fine-desc">Cada nómina que cobres durante el resto de tu vida. Sin casa, sin coche, sin cuenta con más de 500 €</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="grid2">
+
+    <div class="card">
+      <div class="section-label">Documentos que te protegen</div>
+      <div style="margin-bottom: .75rem;">
+        <div class="doc-pill">LoA — Letter of Authorization</div>
+        <div class="doc-pill">Contrato de Red Team</div>
+        <div class="doc-pill">Hold Harmless Agreement</div>
+        <div class="doc-pill">RoE — Rules of Engagement</div>
+      </div>
+      <div class="section-label" style="margin-top:.5rem;">¿Quién puede firmar?</div>
+      <div class="signer-row"><span class="ok-dot"></span>CEO / Director General</div>
+      <div class="signer-row"><span class="ok-dot"></span>CISO o CIO con poderes delegados</div>
+      <div class="signer-row"><span class="ok-dot"></span>Apoderado legal inscrito en escritura</div>
+      <div class="signer-row"><span class="no-dot"></span>El "socio descontento" — nulo de pleno derecho</div>
+      <div class="signer-row"><span class="no-dot"></span>Recepcionista o empleado medio</div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Las 3 cosas que DEBEN estar en el papel</div>
+      <div class="scope-item">
+        <div class="scope-num">1</div>
+        <div>
+          <div class="scope-title">Scope exacto</div>
+          <div class="scope-desc">IPs y dominios precisos. Si el papel dice <code style="font-size:11px;">servidor-viejo.com</code> y atacás <code style="font-size:11px;">servidor-banco.com</code> → delito</div>
+        </div>
+      </div>
+      <div class="scope-item">
+        <div class="scope-num">2</div>
+        <div>
+          <div class="scope-title">Ventana temporal</div>
+          <div class="scope-desc">Fecha y hora exacta de inicio y fin. Fuera de ese horario → delito, aunque tengas contrato</div>
+        </div>
+      </div>
+      <div class="scope-item">
+        <div class="scope-num">3</div>
+        <div>
+          <div class="scope-title">Técnicas autorizadas</div>
+          <div class="scope-desc">Debe decir explícitamente: SQL Injection, ingeniería social, acceso físico… Si no aparece → delito</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="warn-banner">
+    <i class="ti ti-alert-triangle warn-icon" aria-hidden="true"></i>
+    <div class="warn-text"><strong>Regla de oro:</strong> Si el papel no tiene esas tres cosas, apagá el PC y salí corriendo. Sin LoA válida no eres un pentester — eres un delincuente con teclado. La diferencia entre los dos la firma el Representante Legal, nadie más.</div>
+  </div>
+
+</div>
